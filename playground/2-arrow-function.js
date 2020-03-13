@@ -10,15 +10,15 @@
 
 // console.log(square(3))
 
+// NOTE: arrow functions don't bind their 'this' value
+
 const event = {
     name: 'festa di compleanno',
     guestList: ['Fabio', 'Chiara', 'Antani'],
     printGuestList() {
-        const that = this
-
         console.log('Guest list for ' + this.name)
         this.guestList.forEach((guest) => {
-            console.log(guest + ' is attending ' + that.name)
+            console.log(guest + ' is attending ' + this.name)
         })
     }
 }
