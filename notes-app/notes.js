@@ -27,9 +27,9 @@ const removeNote = (title) => {
 
 const addNote = (title, body) => {
     const notes = loadNotes()
-    const duplicateNodes = notes.filter((note) => title === note.title)
+    const duplicateNode = notes.find((note) => title === note.title)
 
-    if (duplicateNodes.length === 0) {
+    if (!duplicateNode) {
         notes.push({
             title: title,
             body: body
