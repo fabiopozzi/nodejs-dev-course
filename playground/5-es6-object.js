@@ -35,3 +35,11 @@ const transaction = (type, { label, stock }) => {
 }
 
 transaction('order', product)
+
+// handle default value for object that gets destructured
+const transaction1 = (type, { label, stock = 42} = {}) => {
+    console.log(type, label, stock)
+    // label and stock are 'undefined' if the object to be destructured is not passed
+}
+
+transaction1('order')
