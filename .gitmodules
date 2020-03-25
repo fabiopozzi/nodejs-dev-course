@@ -1,3 +1,6 @@
 [submodule "web-server"]
 	path = web-server
 	url = git@github.com:fabiopozzi/web-server.git
+[submodule "task-manager"]
+	path = task-manager
+	url = git@github.com:fabiopozzi/nodejs-task-manager.git
